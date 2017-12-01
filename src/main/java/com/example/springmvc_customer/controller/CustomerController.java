@@ -20,7 +20,7 @@ public class CustomerController {
    }
 
    //Müşterileri Listeleme
-   @RequestMapping({"/customers","/"})
+   @RequestMapping({"/customers"})
    public String listCustomers(Model model){
 
         model.addAttribute("customerList",customerService.listAllCustomers());
@@ -54,5 +54,6 @@ public class CustomerController {
         customerService.deleteCustomer(id);
         return "redirect:/customers";
     }
+
 
 }
